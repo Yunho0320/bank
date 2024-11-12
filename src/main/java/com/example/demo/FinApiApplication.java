@@ -13,6 +13,7 @@ public class FinApiApplication {
 		SpringApplication.run(FinApiApplication.class, args);
 		System.out.println("Success");
 		StockFetcherService fetch = new StockFetcherService();
+		System.out.println("TEST");
 		Map<String, Object> response = fetch.fetchStockData("IBM");
 	}
 }
