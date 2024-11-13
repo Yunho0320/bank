@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Stock Prediction</title>
+</head>
+<body>
+<h2>Predicted Stock Prices</h2>
+
+<!-- Display an error message if no prediction data is available -->
+<div th:if="${error}" th:text="${error}"></div>
+
+<table border="1" th:if="${predictedPrices != null and !predictedPrices.isEmpty()}">
+  <thead>
+  <tr>
+    <th>Prediction Index</th>
+    <th>Predicted Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="price, iterStat : ${predictedPrices}">
+    <td th:text="${iterStat.index + 1}"></td> <!-- Prediction index -->
+    <td th:text="${price}"></td> <!-- Predicted price -->
+  </tr>
+  </tbody>
+</table>
+
+<!-- Display a message if there are no predictions -->
+<div th:if="${predictedPrices == null or predictedPrices.isEmpty()}">
+  <p>No predictions available.</p>
+</div>
+</body>
+</html>

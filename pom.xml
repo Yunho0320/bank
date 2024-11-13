@@ -42,6 +42,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math3</artifactId>
+			<version>3.6.1</version> <!-- You can use the latest version if needed -->
+		</dependency>
+
+		<dependency>
 		<groupId>com.azure</groupId>
 		<artifactId>azure-security-keyvault-secrets</artifactId>
 		<version>4.9.0</version>

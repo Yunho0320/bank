@@ -1,4 +1,4 @@
-//package com.example.demo.config;
+//package com.example.demo.finapi.config;
 //
 //import com.azure.identity.DefaultAzureCredentialBuilder;
 //import com.azure.security.keyvault.secrets.SecretClient;

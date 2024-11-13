@@ -1,6 +1,5 @@
-package com.example.demo.service;
+package com.example.demo.finapi.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,7 +15,7 @@ public class StockFetcherService {
 
     public Map<String, Object> fetchStockData(String symbol) {
 //        String apiKey = azureKeyVaultService.getSecret("API-KEY");
-        String apiKey= "JZR95VJH951RGR1T";
+        String apiKey= "demo";
         String url = String.format("%s&symbol=%s&interval=5min&apikey=%s", BASE_URL, symbol, apiKey);
         RestTemplate restTemplate = new RestTemplate();
         Map<String, Object> response = restTemplate.getForObject(url, Map.class);
